@@ -22,7 +22,10 @@ response = requests.get(url)
 if response.status_code == 200:
     # Convert the response to json format
     data = response.json()
-    
+
+    # Print the name of the director
+    print(data.get('director'))
+
     # Process the data as needed
     print(json.dumps(data, indent=4))
 else:
