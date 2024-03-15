@@ -23,11 +23,11 @@ if response.status_code == 200:
     # Convert the response to json format
     data = response.json()
 
+    # Print statmenet
+    print("The director of the movie is:")
+
     # Print the name of the director
     print(data.get('director'))
-
-    # Process the data as needed
-    print(json.dumps(data, indent=4))
 else:
     # Print an error message if the request was unsuccessful
     print("Error:", response.status_code)
